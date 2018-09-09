@@ -17,6 +17,10 @@ public class Client {
 		p.println(number);
 		temp = sc1.nextInt();
 		System.out.println(temp);
+		
+		sc.close();
+		s.close();
+		sc1.close();
 
 	}
 

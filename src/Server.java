@@ -18,6 +18,9 @@ public class Server {
 		
 		PrintStream p = new PrintStream(ss.getOutputStream());
 		p.println(number+" del cerber miher");
+		
+		sc.close();
+		s1.close();
 	}
 
 }
