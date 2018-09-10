@@ -7,6 +7,7 @@ import java.util.Scanner;
 import javax.swing.JOptionPane;
 
 public class Server {
+	/*
 	
 	public static void main(String args[]) throws IOException {
 		int number;
@@ -22,5 +23,5 @@ public class Server {
 		sc.close();
 		s1.close();
 	}
-
+*/
 }
