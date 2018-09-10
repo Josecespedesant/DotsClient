@@ -1,9 +1,13 @@
 package json;
 
 import java.io.IOException;
-
 import org.codehaus.jackson.map.ObjectMapper;
 
+/**
+ * Test
+ * @author Jose Antonio Cespedes Downing
+ *
+ */
 public class Test {
 
 	public static void main(String[] args) {
@@ -16,6 +20,9 @@ public class Test {
 		}catch(IOException mp) {
 			System.out.println("Esta vara c mamo");
 		}
+		
+	
 	}
+	
 
 }
