@@ -7,13 +7,13 @@ package linkedlist;
  * @param <T>
  */
 public class LinkedList < T > {
-    private Node<T> head;
+    private Node head;
     private int length;
 
     public int getLength() {
         return this.length;
     }
-    public Node<T> getHead() {
+    public Node getHead() {
         return this.head;
     }
 
@@ -24,20 +24,20 @@ public class LinkedList < T > {
 
     public void append(T data) {
         if (this.head == null) {
-            this.head = new Node<T>(data);
+            this.head = new Node(data);
         } else {
-            Node<T> temp = this.head;
+            Node temp = this.head;
             while (temp.getNext() != null) {
                 temp = temp.getNext();
             }
-            temp.setNext(new Node<T>(data));
+            temp.setNext(new Node(data));
         }
         this.length++;
     }
 
     public boolean check(T data) {
         boolean dataIsFound = false;
-        Node<T> temp = this.head;
+        Node temp = this.head;
         while (temp != null && temp.getData() != data) {
             temp = temp.getNext();
         }
@@ -53,8 +53,8 @@ public class LinkedList < T > {
             this.head = this.head.getNext();
             this.length--;
         } else {
-            Node<T> temp = this.head;
-            Node<T> prev = this.head;
+            Node temp = this.head;
+            Node prev = this.head;
             while (temp.getNext() != null && temp.getData() != data) {
                 prev = temp;
                 temp = temp.getNext();

@@ -6,7 +6,6 @@ package json;
  * Declaracion de la clase JsonParser
  */
 public class JsonParser {
-	//Atributos de 
 	private int dot1PosX;
 	private int dot1PosY;
 	private int dot2PosX;
