@@ -74,7 +74,7 @@ public class Matrix {
     }
 
     /**
-     * Searches for value in specified index, and changes it's value.
+     * Searches for value in specified index, and changes it's value if fiybd.
      *
      * @param i, row index
      * @param j, column index
