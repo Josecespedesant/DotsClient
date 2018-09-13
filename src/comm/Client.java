@@ -1,51 +1,43 @@
 package comm;
 
-import java.io.BufferedReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintStream;
-import java.net.Socket;
-import java.net.UnknownHostException;
-import org.json.JSONObject;
+import java.net.*;
+import java.io.*;
 
 public class Client {
+    private static String host;
+    private static int port;
 
-    public static void main(String[] args) throws UnknownHostException, IOException {
+    public static void main(String[] args) {
 
-        JSONObject obj = new JSONObject();
-        obj.put("X", "numero en X");
-        obj.put("Y", "numero en Y");
+    	//Aquí se debe ingresar la IP de la red
+        try (Socket socket = new Socket("192.168.100.2", 22258)) {
+ 
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            PrintStream ps = new PrintStream(socket.getOutputStream());
+            BufferedReader brs = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 
-         try (FileWriter file = new FileWriter("test.json")) {
-
-                file.write(obj.toString());
-                file.flush();
-
-          } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-           // System.out.print(obj);
-
-
-
-        Socket s = new Socket("127.0.0.1",69);
-        
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        PrintStream ps = new PrintStream(s.getOutputStream());
-        BufferedReader brs = new BufferedReader(new InputStreamReader(s.getInputStream()));
-        while(true) {
-            
-            String st = br.readLine();
-            ps.println(obj);
-
-            if(s.equals("exit")) {
-                System.exit(1);
-            }
-            System.out.println("Data returned " + s);
+            String text;
+ 
+            do {
+                text = br.readLine();
+ 
+                ps.println(text);
+ 
+                String time = brs.readLine();
+ 
+                System.out.println(time);
+ 
+            } while (true);
+ 
+           // socket.close();
+ 
+        } catch (UnknownHostException ex) {
+ 
+            System.out.println("Server not found: " + ex.getMessage());
+ 
+        } catch (IOException ex) {
+ 
+            System.out.println("I/O error: " + ex.getMessage());
         }
-
     }
-
 }
