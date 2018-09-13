@@ -9,7 +9,7 @@ public class Client {
 
     public static void main(String[] args) {
 
-    	//Aquí se debe ingresar la IP de la red
+    	//Aquí se debe ingresar la IP de la red (primer parámetro)
         try (Socket socket = new Socket("192.168.100.2", 22258)) {
  
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
