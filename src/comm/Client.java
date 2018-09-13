@@ -9,7 +9,7 @@ public class Client {
 
     public static void main(String[] args) {
 
-    	//Aquí se debe ingresar la IP de la red (primer parámetro)
+    	//Aquí se debe ingresar la IP de la red (primer parámetro).
         try (Socket socket = new Socket("192.168.100.2", 22258)) {
  
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -20,7 +20,7 @@ public class Client {
  
             do {
                 text = br.readLine();
- 
+                
                 ps.println(text);
  
                 String time = brs.readLine();

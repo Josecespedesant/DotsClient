@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> branch 'master' of https://github.com/Josecespedesant/DotsClient.git
 package encode;
 
 import linkedlist.LinkedList;
