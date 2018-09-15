@@ -114,11 +114,4 @@ public class Matrix {
             System.out.println("");
         }
     }
-
-    public static void main(String[] args) {
-        Matrix test = new Matrix(10, 10, 0);
-        System.out.println(test.changeValue(9, 9, 2));
-        test.printMatrix();
-    }
-
 }

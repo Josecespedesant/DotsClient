@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 import java.io.PrintStream;
 import java.net.Socket;
 import java.net.UnknownHostException;
-import org.json.JSONObject;
+import org.json.simple.JSONObject;
 
 public class Client {
 

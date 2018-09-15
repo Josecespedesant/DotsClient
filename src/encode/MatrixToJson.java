@@ -3,9 +3,13 @@ package encode;
 import linkedlist.LinkedList;
 import linkedlist.Node;
 import matrix.Matrix;
-import org.json.JSONObject;
-import org.json.JSONArray;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
@@ -33,8 +37,8 @@ public class MatrixToJson {
         JSONObject jsonDoc = new JSONObject();
 
         JSONArray points = new JSONArray();
-        points.put(score.getHead().getData());
-        points.put(score.getHead().getNext().getData());
+        points.add(score.getHead().getData());
+        points.add(score.getHead().getNext().getData());
         jsonDoc.put("points", points);
 
         JSONArray _matrix = new JSONArray();
@@ -44,10 +48,10 @@ public class MatrixToJson {
             JSONArray temp = new JSONArray();
             Node tempNode2 = ((LinkedList) tempNode1.getData()).getHead();
             for (int j=0; j < matrix.getColumns(); j++) {
-               temp.put(tempNode2.getData());
+               temp.add(tempNode2.getData());
                 tempNode2 = tempNode2.getNext();
             }
-            _matrix.put(temp);
+            _matrix.add(temp);
             tempNode1 = tempNode1.getNext();
         }
         jsonDoc.put("matrix", _matrix);
@@ -67,13 +71,14 @@ public class MatrixToJson {
 
         JSONArray score = (JSONArray) jsonDoc.get("points");
 
-        scorePlayer1 = score.getInt(0);
-        scorePlayer2 = score.getInt(1);
+        //TODO: usar
+        scorePlayer1 = (int) score.get(0);
+        scorePlayer2 = (int) score.get(1);
 
         JSONArray _matrix = (JSONArray) jsonDoc.get("matrix");
 
-        int matrixColumns = _matrix.length();
-        int matrixRows = ((JSONArray) _matrix.get(0)).length();
+        int matrixColumns = _matrix.size();
+        int matrixRows = ((JSONArray) _matrix.get(0)).size();
 
         // TODO: parametrizar inicial value
         Matrix matrix = new Matrix(matrixRows, matrixColumns, 0);
@@ -81,7 +86,7 @@ public class MatrixToJson {
         for (int j = 0; j < matrixColumns; j++) {
             JSONArray tempColumn = (JSONArray) _matrix.get(j);
             for (int i = 0; i < matrixRows; i++) {
-                int tempValue = tempColumn.getInt(i);
+                int tempValue = (int) tempColumn.get(i);
                 matrix.changeValue(i, j, tempValue);
             }
         }
@@ -89,8 +94,13 @@ public class MatrixToJson {
         return matrix;
     }
 
+    /**
+     * Turns a JSONObject instance into a file and saves to disk.
+     *
+     * @param jsonDoc
+     */
     public void saveJsonFile(JSONObject jsonDoc) {
-        List<String> lines = Arrays.asList(jsonDoc.toString(4));
+        List<String> lines = Arrays.asList(jsonDoc.toString());
         Path file = Paths.get("matrixAsJson.json");
         try {
             Files.write(file, lines, Charset.forName("UTF-8"));
@@ -101,8 +111,31 @@ public class MatrixToJson {
         }
     }
 
-    public void fetchJsonFile() {
-
+    /**
+     * Reads .json file and turns it into an JSONObject instance.
+     *
+     * @param docName, .json file name
+     * @return
+     */
+    public JSONObject fetchJsonFile(String docName) {
+        JSONObject json = null;
+        try {
+            FileReader doc = new FileReader(docName);
+            JSONParser parser = new JSONParser();
+            try {
+                json = (JSONObject) parser.parse(doc);
+            }
+            catch (ParseException e1) {
+               e1.printStackTrace();
+            }
+            catch (IOException e2) {
+                e2.printStackTrace();
+            }
+        }
+        catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        return json;
     }
 
     public static void main(String[] args) {

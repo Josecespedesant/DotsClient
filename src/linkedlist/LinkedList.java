@@ -10,18 +10,20 @@ public class LinkedList < T > {
     private Node head;
     private int length;
 
-    public int getLength() {
-        return this.length;
-    }
-    public Node getHead() {
-        return this.head;
-    }
+    public int getLength() { return this.length; }
+
+    public Node getHead() { return this.head; }
 
     public LinkedList() {
         this.head = null;
         this.length = 0;
     }
 
+    /**
+     * Creates Node instance with data and appends it to linked list
+     *
+     * @param data
+     */
     public void append(T data) {
         if (this.head == null) {
             this.head = new Node(data);
@@ -35,6 +37,12 @@ public class LinkedList < T > {
         this.length++;
     }
 
+    /**
+     * Searches for specified value on list.
+     *
+     * @param data
+     * @return If data is found on list
+     */
     public boolean check(T data) {
         boolean dataIsFound = false;
         Node temp = this.head;
@@ -48,6 +56,11 @@ public class LinkedList < T > {
         return dataIsFound;
     }
 
+    /**
+     * Deletes Node on list containing specified data.
+     *
+     * @param data
+     */
     public void delete(T data) {
         if (this.head.getData() == data) {
             this.head = this.head.getNext();
@@ -70,20 +83,22 @@ public class LinkedList < T > {
         }
     }
 
-    public boolean isEmpty(){
-        return (this.head == null);
+    /**
+     * Checks if accessing an n Node is possible by n < list length.
+     *
+     * @param pIndex
+     * @return
+     */
+    public boolean indexExists(int pIndex){
+        boolean indexAccessible = false;
+        if(!isEmpty()){
+            indexAccessible = (pIndex < this.length && pIndex >= 0);
+        }
+        return indexAccessible;
     }
 
-    public boolean indexExists(int pIndex){
-        if(!isEmpty()){
-            return indexExists_aux(pIndex);
-        } else {
-            System.out.println("List is empty.");
-            return false;
-        }
-    }
-    private boolean indexExists_aux(int pIndex){
-        return (pIndex < this.length && pIndex >= 0);
+    public boolean isEmpty(){
+        return (this.head == null);
     }
 
 }
