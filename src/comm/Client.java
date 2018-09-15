@@ -1,6 +1,9 @@
 package comm;
 
 import java.net.*;
+
+import server.Server;
+
 import java.io.*;
 
 /**
@@ -49,13 +52,14 @@ public class Client {
     }
     
     /**
-     * Método main que hace iniciar un nuevo cliente
+     * Método main que inicia el cliente
      * @param args
      * @throws Exception
      */
     public static void main(String[] args) throws Exception {
-    	Client client = new Client("192.168.100.2", 4444);
-    	client.start();
-    }
+        //  if (args.length < 1) return;
+      	Client client = new Client("192.168.100.2", 4444);
+      	app.listen();
+      }
 }
 
