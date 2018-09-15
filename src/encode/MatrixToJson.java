@@ -1,13 +1,10 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> branch 'master' of https://github.com/Josecespedesant/DotsClient.git
 package encode;
 
 import linkedlist.LinkedList;
 import linkedlist.Node;
 import matrix.Matrix;
-import org.json.JSONObject;
+import org.json.jsonsimple.JSONObject;
 import org.json.JSONArray;
 
 import java.io.IOException;
@@ -106,7 +103,7 @@ public class MatrixToJson {
     }
 
     public void fetchJsonFile() {
-
+    	
     }
 
     public static void main(String[] args) {
