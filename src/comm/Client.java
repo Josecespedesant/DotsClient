@@ -11,6 +11,7 @@ import java.io.*;
  * @author Daniel Sing
  *
  */
+
 public class Client {
 	//Atributo de la clase cliente
 	private Socket socket;
