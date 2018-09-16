@@ -93,15 +93,10 @@ public class LinkedList < T > {
         boolean indexAccessible = false;
         if(!isEmpty()){
             indexAccessible = (pIndex < this.length && pIndex >= 0);
-            System.out.println(indexAccessible);
         }
         return indexAccessible;
     }
-    
-    /**
-     * 
-     * @return
-     */
+
     public boolean isEmpty(){
         return (this.head == null);
     }

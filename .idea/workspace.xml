@@ -2,36 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6077fbdf-355a-4ab8-a9b2-e4aa373af592" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.project" beforeDir="false" afterPath="$PROJECT_DIR$/.project" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientServer/.classpath" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientServer/.idea/libraries/json_20160810.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientServer/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientServer/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientServer/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientServer/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientServer/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientServer/.project" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientServer/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientServer/ClientServer.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientServer/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientServer/bin/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientServer/json-20160810.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientServer/matrixAsJson.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientServer/src/comm/Client.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientServer/src/encode/JsonParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientServer/src/encode/MatrixToJson.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientServer/src/encode/Test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientServer/src/json/JsonParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientServer/src/json/Test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientServer/src/linkedlist/LinkedList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientServer/src/linkedlist/Node.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientServer/src/linkedlist/main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientServer/src/matrix/Matrix.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientServer/test.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/bin/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/matrix/Matrix.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/matrix/Matrix.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/comm/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/comm/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/encode/MatrixToJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/encode/MatrixToJson.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/linkedlist/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/linkedlist/LinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/matrix/Matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/matrix/Matrix.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -124,26 +97,28 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="2" />
+          <entry key="java" value="3" />
+          <entry key="json" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="446" />
+          <entry key="java" value="552" />
           <entry key="json" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="2" />
+          <entry key="JAVA" value="3" />
+          <entry key="JSON" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.spring.boot.mvc.usages" />
       <usages-collector id="statistics.spring.boot.run.usages" />
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="446" />
+          <entry key="JAVA" value="552" />
           <entry key="JSON" value="2" />
         </counts>
       </usages-collector>
@@ -153,49 +128,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/people/Player.java">
+        <entry file="file://$PROJECT_DIR$/src/encode/MatrixToJson.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="26" selection-start-line="26" selection-end-line="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/game/Game.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+            <state relative-caret-position="179">
+              <caret line="90" column="45" selection-start-line="90" selection-start-column="45" selection-end-line="90" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/linkedlist/LinkedList.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1425">
-              <caret line="95" column="46" selection-start-line="95" selection-start-column="46" selection-end-line="95" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/linkedlist/Node.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/encode/MatrixToJson.java">
+        <entry file="file://$PROJECT_DIR$/src/matrix/Matrix.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
+            <state relative-caret-position="150">
+              <caret line="39" column="39" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -204,13 +152,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/matrix/Matrix.java">
+        <entry file="file://$PROJECT_DIR$/matrixAsJson.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1260">
-              <caret line="87" column="33" selection-start-line="87" selection-start-column="33" selection-end-line="87" selection-end-column="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="119">
+              <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -245,8 +190,8 @@
         <option value="$PROJECT_DIR$/src/encode/JsonParser.java" />
         <option value="$PROJECT_DIR$/matrixAsJson.json" />
         <option value="$PROJECT_DIR$/src/linkedlist/LinkedList.java" />
-        <option value="$PROJECT_DIR$/src/matrix/Matrix.java" />
         <option value="$PROJECT_DIR$/src/encode/MatrixToJson.java" />
+        <option value="$PROJECT_DIR$/src/matrix/Matrix.java" />
       </list>
     </option>
   </component>
@@ -414,12 +359,12 @@
       <workItem from="1536947537998" duration="2525000" />
       <workItem from="1537027848687" duration="1352000" />
       <workItem from="1537066713299" duration="11484000" />
-      <workItem from="1537137771314" duration="222000" />
+      <workItem from="1537137771314" duration="3098000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42446000" />
+    <option name="totallyTimeSpent" value="45294000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="694" extended-state="6" />
@@ -435,7 +380,7 @@
       <window_info anchor="bottom" id="Messages" order="0" weight="0.329718" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.3286219" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.32756132" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.32685512" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.3997114" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -511,17 +456,17 @@
     <entry file="file://$PROJECT_DIR$/src/linkedlist/main.java" />
     <entry file="file://$PROJECT_DIR$/src/comm/Server.java" />
     <entry file="file://$PROJECT_DIR$/src/encode/JsonParser.java" />
-    <entry file="file://$PROJECT_DIR$/matrixAsJson.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/people/Player.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/linkedlist/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
@@ -535,13 +480,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/encode/MatrixToJson.java">
+    <entry file="file://$PROJECT_DIR$/src/linkedlist/LinkedList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-566">
-          <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="1470">
+          <caret line="98" selection-start-line="98" selection-end-line="98" />
         </state>
       </provider>
     </entry>
@@ -555,24 +497,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/linkedlist/LinkedList.java">
+    <entry file="file://$PROJECT_DIR$/matrixAsJson.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1369">
-          <caret line="95" column="46" selection-start-line="95" selection-start-column="46" selection-end-line="95" selection-end-column="46" />
+        <state relative-caret-position="119">
+          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/linkedlist/Node.java">
+    <entry file="file://$PROJECT_DIR$/src/encode/MatrixToJson.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="179">
+          <caret line="90" column="45" selection-start-line="90" selection-start-column="45" selection-end-line="90" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/matrix/Matrix.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="87" column="33" selection-start-line="87" selection-start-column="33" selection-end-line="87" selection-end-column="33" />
+        <state relative-caret-position="150">
+          <caret line="39" column="39" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

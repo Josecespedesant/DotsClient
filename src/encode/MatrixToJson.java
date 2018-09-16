@@ -139,6 +139,7 @@ public class MatrixToJson {
         MatrixToJson conv = new MatrixToJson();
         JSONObject json = conv.fetchJsonFile("matrixAsJson.json");
         Matrix _matrix = conv.decodeMatrix(json);
+        System.out.println(_matrix.getRows() + " " + _matrix.getColumns());
         _matrix.printMatrix();
     }
 
