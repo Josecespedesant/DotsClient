@@ -1,9 +1,6 @@
 package comm;
 
 import java.net.*;
-
-import server.Server;
-
 import java.io.*;
 
 /**
@@ -58,9 +55,7 @@ public class Client {
      * @throws Exception
      */
     public static void main(String[] args) throws Exception {
-        //  if (args.length < 1) return;
-      	Client client = new Client("192.168.100.2", 4444);
-      	app.listen();
+      	Client cliente = new Client("192.168.100.2", 4444);
+      	cliente.start();
       }
 }
-
