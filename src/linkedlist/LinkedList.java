@@ -97,7 +97,11 @@ public class LinkedList < T > {
         }
         return indexAccessible;
     }
-
+    
+    /**
+     * 
+     * @return
+     */
     public boolean isEmpty(){
         return (this.head == null);
     }
