@@ -1,31 +1,18 @@
 
-package encode;
+package json_parse;
 
 import linkedlist.LinkedList;
 import linkedlist.Node;
 import matrix.Matrix;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
-
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-import java.nio.charset.Charset;
-import java.nio.file.Files;
-
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.Arrays;
-import java.util.List;
 
 /**
  * Translates a Matrix instance to/from .json format.
  *
  * @author David Azofeifa H.
  */
-public class MatrixToJson {
+public class Parse {
 
     /**
      * Encodes a Matrix instance into a JSONObject instance.
@@ -34,7 +21,7 @@ public class MatrixToJson {
      * @param score, game score for both players.
      * @return JSONObject with corresponding matrix values.
      */
-    public JSONObject encondeMatrix(Matrix matrix, LinkedList score) {
+    public JSONObject MatrixToJson(Matrix matrix, LinkedList score) {
         JSONObject jsonDoc = new JSONObject();
 
         JSONArray points = new JSONArray();
@@ -65,7 +52,7 @@ public class MatrixToJson {
      * @param jsonDoc, JSONObject instance
     * @return Matrix instance
     */
-    public Matrix decodeMatrix(JSONObject jsonDoc) {
+    public Matrix JsonToMatrix(JSONObject jsonDoc) {
         //TODO: improve
         int scorePlayer1 = 0;
         int scorePlayer2 = 0;
@@ -93,54 +80,4 @@ public class MatrixToJson {
         }
         return matrix;
     }
-
-    /**
-     * Turns a JSONObject instance into a file and saves to disk.
-     *
-     * @param jsonDoc
-     */
-    public void saveJsonFile(JSONObject jsonDoc) {
-        List<String> lines = Arrays.asList(jsonDoc.toString());
-        Path file = Paths.get("matrixAsJson.json");
-        try {
-            Files.write(file, lines, Charset.forName("UTF-8"));
-        }
-        catch (IOException e) {
-            System.out.println(e.toString());
-            System.out.println("Coudn't save fila in specified path");
-        }
-    }
-
-    /**
-     * Reads .json file and turns it into an JSONObject instance.
-     *
-     * @param docName, .json file name
-     * @return
-     */
-    public JSONObject fetchJsonFile(String docName) {
-        JSONObject json = null;
-        try {
-            FileReader doc = new FileReader(docName);
-            JSONParser parser = new JSONParser();
-            try {
-                json = (JSONObject) parser.parse(doc);
-            } catch (ParseException e1) {
-                e1.printStackTrace();
-            } catch (IOException e2) {
-                e2.printStackTrace();
-            }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-        return json;
-    }
-
-    public static void main(String[] args) {
-        MatrixToJson conv = new MatrixToJson();
-        JSONObject json = conv.fetchJsonFile("matrixAsJson.json");
-        Matrix _matrix = conv.decodeMatrix(json);
-        System.out.println(_matrix.getRows() + " " + _matrix.getColumns());
-        _matrix.printMatrix();
-    }
-
 }

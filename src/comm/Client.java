@@ -4,8 +4,9 @@ import java.net.*;
 
 import org.json.simple.JSONObject;
 
-import encode.MatrixToJson;
-import matrix.Matrix;
+import json_parse.Parse;
+
+import json_conversion.Conversion;
 
 import java.io.*;
 
@@ -36,7 +37,7 @@ public class Client {
      */
     private void start() throws IOException{
     	
-    	MatrixToJson mtoj = new MatrixToJson();
+    	Conversion mtoj = new Conversion();
     	JSONObject data = mtoj.fetchJsonFile("test.json");
     	
     	DataOutputStream wr = new DataOutputStream(socket.getOutputStream());

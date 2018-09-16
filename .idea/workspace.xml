@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6077fbdf-355a-4ab8-a9b2-e4aa373af592" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/encode/MatrixToJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/encode/MatrixToJson.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/linkedlist/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/linkedlist/LinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/matrix/Matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/matrix/Matrix.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/json_conversion/Conversion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/comm/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/comm/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/encode/MatrixToJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/json_parse/Parse.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -97,20 +97,21 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="3" />
+          <entry key="java" value="4" />
           <entry key="json" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="552" />
+          <entry key="dummy" value="5" />
+          <entry key="java" value="599" />
           <entry key="json" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="3" />
+          <entry key="JAVA" value="4" />
           <entry key="JSON" value="1" />
         </counts>
       </usages-collector>
@@ -118,8 +119,9 @@
       <usages-collector id="statistics.spring.boot.run.usages" />
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="552" />
+          <entry key="JAVA" value="599" />
           <entry key="JSON" value="2" />
+          <entry key="PLAIN_TEXT" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -128,10 +130,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/encode/MatrixToJson.java">
+        <entry file="file://$PROJECT_DIR$/src/json_parse/Parse.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="90" column="45" selection-start-line="90" selection-start-column="45" selection-end-line="90" selection-end-column="45" />
+            <state relative-caret-position="-101">
+              <caret line="27" column="19" lean-forward="true" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -140,10 +142,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/matrix/Matrix.java">
+        <entry file="file://$PROJECT_DIR$/src/json_conversion/Conversion.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="39" column="39" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
+            <state relative-caret-position="619">
+              <caret line="58" column="5" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -192,6 +194,9 @@
         <option value="$PROJECT_DIR$/src/linkedlist/LinkedList.java" />
         <option value="$PROJECT_DIR$/src/encode/MatrixToJson.java" />
         <option value="$PROJECT_DIR$/src/matrix/Matrix.java" />
+        <option value="$PROJECT_DIR$/src/parse/Parse.java" />
+        <option value="$PROJECT_DIR$/src/json_conversion/Conversion.java" />
+        <option value="$PROJECT_DIR$/src/json_parse/Parse.java" />
       </list>
     </option>
   </component>
@@ -234,31 +239,13 @@
               <item name="DotsClient" type="b2602c69:ProjectViewProjectNode" />
               <item name="DotsClient" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="comm" type="462c0819:PsiDirectoryNode" />
+              <item name="json_conversion" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DotsClient" type="b2602c69:ProjectViewProjectNode" />
               <item name="DotsClient" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="encode" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DotsClient" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DotsClient" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="game" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DotsClient" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DotsClient" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="linkedlist" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DotsClient" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DotsClient" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="matrix" type="462c0819:PsiDirectoryNode" />
+              <item name="json_parse" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -271,7 +258,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537084258384" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537141597342" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -298,7 +285,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MatrixToJson">
+  <component name="RunManager" selected="Application.Parse">
     <configuration name="Matrix" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="matrix.Matrix" />
       <module name="ClientServer" />
@@ -312,12 +299,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MatrixToJson" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="encode.MatrixToJson" />
+    <configuration name="Parse" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="json_parse.Parse" />
       <module name="ClientServer" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="encode.*" />
+          <option name="PATTERN" value="json_parse.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -327,11 +314,11 @@
     </configuration>
     <list>
       <item itemvalue="Application.Matrix" />
-      <item itemvalue="Application.MatrixToJson" />
+      <item itemvalue="Application.Parse" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MatrixToJson" />
+        <item itemvalue="Application.Parse" />
         <item itemvalue="Application.Matrix" />
       </list>
     </recent_temporary>
@@ -359,19 +346,19 @@
       <workItem from="1536947537998" duration="2525000" />
       <workItem from="1537027848687" duration="1352000" />
       <workItem from="1537066713299" duration="11484000" />
-      <workItem from="1537137771314" duration="3098000" />
+      <workItem from="1537137771314" duration="3782000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45294000" />
+    <option name="totallyTimeSpent" value="45978000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="694" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2590909" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49868765" visible="true" weight="0.2590909" />
+      <window_info id="Structure" order="1" sideWeight="0.5013123" side_tool="true" weight="0.2590909" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -380,7 +367,7 @@
       <window_info anchor="bottom" id="Messages" order="0" weight="0.329718" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.3286219" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.32685512" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.32685512" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.3997114" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -504,20 +491,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/encode/MatrixToJson.java">
+    <entry file="file://$PROJECT_DIR$/src/matrix/Matrix.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="90" column="45" selection-start-line="90" selection-start-column="45" selection-end-line="90" selection-end-column="45" />
+        <state relative-caret-position="-526">
+          <caret line="39" column="39" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/matrix/Matrix.java">
+    <entry file="file://$PROJECT_DIR$/src/json_parse/Parse.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="39" column="39" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
+        <state relative-caret-position="-101">
+          <caret line="27" column="19" lean-forward="true" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/json_conversion/Conversion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="619">
+          <caret line="58" column="5" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
