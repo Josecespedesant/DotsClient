@@ -1,6 +1,12 @@
 package comm;
 
 import java.net.*;
+
+import org.json.simple.JSONObject;
+
+import encode.MatrixToJson;
+import matrix.Matrix;
+
 import java.io.*;
 
 /**
@@ -29,11 +35,19 @@ public class Client {
      * @throws IOException
      */
     private void start() throws IOException{
-    	 BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-         PrintStream ps = new PrintStream(socket.getOutputStream());
-         BufferedReader brs = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-         String text;
-         try{
+    	
+    	MatrixToJson mtoj = new MatrixToJson();
+    	JSONObject data = mtoj.fetchJsonFile("test.json");
+    	
+    	DataOutputStream wr = new DataOutputStream(socket.getOutputStream());
+    	wr.write(data.toString().getBytes());
+    	
+    	
+    	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        PrintStream ps = new PrintStream(socket.getOutputStream());
+        BufferedReader brs = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+        String text;
+        try{
         	 do {
         		 text = br.readLine();
         		 ps.println(text);
