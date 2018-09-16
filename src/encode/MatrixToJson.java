@@ -73,8 +73,8 @@ public class MatrixToJson {
         JSONArray score = (JSONArray) jsonDoc.get("points");
 
         //TODO: usar
-        scorePlayer1 = (int) score.get(0);
-        scorePlayer2 = (int) score.get(1);
+        //scorePlayer1 = (int) score.get(0);
+        //scorePlayer2 = (int) score.get(1);
 
         JSONArray _matrix = (JSONArray) jsonDoc.get("matrix");
 
@@ -87,11 +87,10 @@ public class MatrixToJson {
         for (int j = 0; j < matrixColumns; j++) {
             JSONArray tempColumn = (JSONArray) _matrix.get(j);
             for (int i = 0; i < matrixRows; i++) {
-                int tempValue = (int) tempColumn.get(i);
+                int tempValue = ((Long) tempColumn.get(i)).intValue();
                 matrix.changeValue(i, j, tempValue);
             }
         }
-
         return matrix;
     }
 
@@ -138,12 +137,9 @@ public class MatrixToJson {
 
     public static void main(String[] args) {
         MatrixToJson conv = new MatrixToJson();
-        Matrix matrix = new Matrix(4,6,1);
-        LinkedList score = new LinkedList();
-        score.append(300);
-        score.append(900);
-        JSONObject tempMatrixJson = conv.encondeMatrix(matrix, score);
-        conv.saveJsonFile(tempMatrixJson);
+        JSONObject json = conv.fetchJsonFile("matrixAsJson.json");
+        Matrix _matrix = conv.decodeMatrix(json);
+        _matrix.printMatrix();
     }
 
 }

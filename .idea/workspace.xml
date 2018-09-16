@@ -2,43 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6077fbdf-355a-4ab8-a9b2-e4aa373af592" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ClientServer/.classpath" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientServer/.idea/libraries/json_20160810.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientServer/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientServer/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientServer/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientServer/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientServer/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientServer/.project" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientServer/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientServer/ClientServer.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientServer/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientServer/bin/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientServer/matrixAsJson.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientServer/src/comm/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientServer/src/encode/JsonParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientServer/src/encode/MatrixToJson.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientServer/src/encode/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientServer/src/json/JsonParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientServer/src/json/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientServer/src/linkedlist/LinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientServer/src/linkedlist/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientServer/src/linkedlist/main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientServer/src/matrix/Matrix.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientServer/test.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/json-20160810.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.project" beforeDir="false" afterPath="$PROJECT_DIR$/.project" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientServer/json-20160810.jar" beforeDir="false" afterPath="$PROJECT_DIR$/ClientServer/json-20160810.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/bin/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/json/JsonParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/json/JsonParser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/json/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/json/Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/json/JsonParser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/json/Test.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/matrix/Matrix.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/matrix/Matrix.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/comm/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/comm/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/comm/Server.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/matrixAsJson.json" beforeDir="false" afterPath="$PROJECT_DIR$/matrixAsJson.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/encode/JsonParser.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/encode/MatrixToJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/encode/MatrixToJson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/linkedlist/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/linkedlist/LinkedList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/matrix/Matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/matrix/Matrix.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
@@ -121,22 +94,48 @@
       <usages-collector id="statistics.spring.boot.run.usages" />
       <usages-collector id="statistics.vcs.git.usages" />
     </session>
+    <session id="525887842">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages" />
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="446" />
+          <entry key="json" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.spring.boot.mvc.usages" />
+      <usages-collector id="statistics.spring.boot.run.usages" />
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="446" />
+          <entry key="JSON" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.js.language.service.starts" />
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/encode/MatrixToJson.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/people/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
+            <state relative-caret-position="360">
               <caret line="26" selection-start-line="26" selection-end-line="26" />
             </state>
           </provider>
@@ -145,8 +144,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/game/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+            <state relative-caret-position="375">
+              <caret line="25" column="22" lean-forward="true" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -157,12 +156,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/linkedlist/LinkedList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1683">
-              <caret line="99" selection-start-line="99" selection-end-line="99" />
-              <folding>
-                <element signature="e#2436#2437#0" expanded="true" />
-                <element signature="e#2478#2479#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="204">
+              <caret line="95" column="46" selection-start-line="95" selection-start-column="46" selection-end-line="95" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -170,17 +165,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/linkedlist/Node.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
+            <state relative-caret-position="255">
               <caret line="19" selection-start-line="19" selection-end-line="19" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/comm/Client.java">
+        <entry file="file://$PROJECT_DIR$/src/encode/MatrixToJson.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="259">
+              <caret line="134" column="9" selection-start-line="134" selection-start-column="9" selection-end-line="134" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -191,18 +186,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/matrix/Matrix.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="789">
-              <caret line="114" column="5" selection-start-line="114" selection-start-column="5" selection-end-line="114" selection-end-column="5" />
+            <state relative-caret-position="-126">
+              <caret line="87" column="33" lean-forward="true" selection-start-line="87" selection-start-column="33" selection-end-line="87" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/matrixAsJson.json">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -230,11 +220,13 @@
         <option value="$PROJECT_DIR$/src/personas/Jugador.java" />
         <option value="$PROJECT_DIR$/src/personas/Player.java" />
         <option value="$PROJECT_DIR$/src/people/Player.java" />
-        <option value="$PROJECT_DIR$/src/matrix/Matrix.java" />
         <option value="$PROJECT_DIR$/src/game/Game.java" />
-        <option value="$PROJECT_DIR$/src/linkedlist/LinkedList.java" />
-        <option value="$PROJECT_DIR$/src/encode/MatrixToJson.java" />
         <option value="$PROJECT_DIR$/src/comm/Client.java" />
+        <option value="$PROJECT_DIR$/src/encode/JsonParser.java" />
+        <option value="$PROJECT_DIR$/matrixAsJson.json" />
+        <option value="$PROJECT_DIR$/src/linkedlist/LinkedList.java" />
+        <option value="$PROJECT_DIR$/src/matrix/Matrix.java" />
+        <option value="$PROJECT_DIR$/src/encode/MatrixToJson.java" />
       </list>
     </option>
   </component>
@@ -260,68 +252,62 @@
         <subPane>
           <expand>
             <path>
-              <item name="Dot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Dot" type="462c0819:PsiDirectoryNode" />
+              <item name="DotsClient" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DotsClient" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Dot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Dot" type="462c0819:PsiDirectoryNode" />
+              <item name="DotsClient" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DotsClient" type="462c0819:PsiDirectoryNode" />
               <item name="libs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Dot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Dot" type="462c0819:PsiDirectoryNode" />
+              <item name="DotsClient" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DotsClient" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Dot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Dot" type="462c0819:PsiDirectoryNode" />
+              <item name="DotsClient" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DotsClient" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="comm" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Dot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Dot" type="462c0819:PsiDirectoryNode" />
+              <item name="DotsClient" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DotsClient" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="encode" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Dot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Dot" type="462c0819:PsiDirectoryNode" />
+              <item name="DotsClient" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DotsClient" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="game" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Dot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Dot" type="462c0819:PsiDirectoryNode" />
+              <item name="DotsClient" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DotsClient" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="linkedlist" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Dot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Dot" type="462c0819:PsiDirectoryNode" />
+              <item name="DotsClient" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DotsClient" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="matrix" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Dot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Dot" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="people" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537028841829" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/libs/json-simple-1.1.1.jar!/" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537084258384" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -407,17 +393,17 @@
       <workItem from="1536806736199" duration="5991000" />
       <workItem from="1536947537998" duration="2525000" />
       <workItem from="1537027848687" duration="1352000" />
+      <workItem from="1537066713299" duration="11484000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30712000" />
+    <option name="totallyTimeSpent" value="42196000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="25" width="1366" height="696" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25159913" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25530303" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -426,9 +412,9 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="0" weight="0.329718" />
       <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.329718" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.329718" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.3286219" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.32756132" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.3997114" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" />
@@ -486,13 +472,6 @@
   <component name="editorHistoryManager">
     <entry file="jar://$PROJECT_DIR$/libs/json-20160810.jar!/org/json/JSONObject.class" />
     <entry file="file://$PROJECT_DIR$/src/Server.java" />
-    <entry file="file://$PROJECT_DIR$/src/encode/JsonParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ClientServer.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -506,69 +485,68 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/json/JsonParser.java" />
     <entry file="file://$PROJECT_DIR$/src/Client.java" />
-    <entry file="file://$PROJECT_DIR$/matrixAsJson.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/encode/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="2" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/linkedlist/main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/comm/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/linkedlist/LinkedList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1683">
-          <caret line="99" selection-start-line="99" selection-end-line="99" />
-          <folding>
-            <element signature="e#2436#2437#0" expanded="true" />
-            <element signature="e#2478#2479#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/linkedlist/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/encode/Test.java" />
+    <entry file="file://$PROJECT_DIR$/src/linkedlist/main.java" />
+    <entry file="file://$PROJECT_DIR$/src/comm/Server.java" />
     <entry file="file://$PROJECT_DIR$/src/people/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
+        <state relative-caret-position="360">
           <caret line="26" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/matrix/Matrix.java">
+    <entry file="file://$PROJECT_DIR$/src/encode/JsonParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="789">
-          <caret line="114" column="5" selection-start-line="114" selection-start-column="5" selection-end-line="114" selection-end-column="5" />
+        <state relative-caret-position="240">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="22" lean-forward="true" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/Game.java">
+    <entry file="file://$PROJECT_DIR$/src/comm/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+        <state relative-caret-position="69">
+          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/linkedlist/LinkedList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="95" column="46" selection-start-line="95" selection-start-column="46" selection-end-line="95" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/linkedlist/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/matrixAsJson.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/matrix/Matrix.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-126">
+          <caret line="87" column="33" lean-forward="true" selection-start-line="87" selection-start-column="33" selection-end-line="87" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -577,15 +555,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/encode/MatrixToJson.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/comm/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="259">
+          <caret line="134" column="9" selection-start-line="134" selection-start-column="9" selection-end-line="134" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -657,7 +628,7 @@
       </state>
       <state key="ProjectJDKs.UI">
         <settings>
-          <last-edited>9.0</last-edited>
+          <last-edited>10</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
