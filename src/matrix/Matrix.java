@@ -35,9 +35,9 @@ public class Matrix {
         this.columns = columns;
         this.matrix = new LinkedList();
 
-        for (int i=0; i < this.rows; i++) {
+        for (int j=0; j < this.columns; j++) {
             LinkedList temp = new LinkedList();
-            for (int j=0; j < this.columns; j++) {
+            for (int i=0; i < this.rows; i++) {
                 temp.append(initialValue1);
             }
             this.matrix.append(temp);
@@ -52,9 +52,10 @@ public class Matrix {
      * @return value matrix contains in specified index
      */
     public int viewValue(int i, int j) {
+        //System.out.println("rows: " + i + ", Column : " + j);
         // TODO: hacer que correctamente retorne falso con i o j mayores de lo permitido
         int value;
-        if (this.matrix.getLength() < j && !((LinkedList) this.matrix.getHead().getData()).indexExists(i))
+        if (!(this.matrix.indexExists(j)) || !(((LinkedList) this.matrix.getHead().getData()).indexExists(i)))
             value = -1;
         else {
             Node temp = this.matrix.getHead();
@@ -84,7 +85,7 @@ public class Matrix {
     public boolean changeValue(int i, int j, int newData) {
         // TODO: hacer que correctamente retorne falso con i o j mayores de lo permitido
         boolean sucessfulChange = true;
-        if (this.matrix.getLength() < j && !((LinkedList) this.matrix.getHead().getData()).indexExists(i))
+        if (!(this.matrix.indexExists(j)) || !(((LinkedList) this.matrix.getHead().getData()).indexExists(i)))
             sucessfulChange = false;
         else {
             Node temp = this.matrix.getHead();
@@ -106,8 +107,8 @@ public class Matrix {
      * Prints all matrix values (in respective order) on console
      */
     public void printMatrix() {
-        for (int j=0; j<this.rows; j++) {
-            for (int i=0; i<this.rows; i++) {
+        for (int j=0; j < this.columns; j++) {
+            for (int i=0; i < this.rows; i++) {
                 System.out.print(this.viewValue(i, j));
             }
             System.out.println("");

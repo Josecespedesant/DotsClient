@@ -4,8 +4,9 @@ import java.net.*;
 
 import org.json.simple.JSONObject;
 
-import encode.MatrixToJson;
-import matrix.Matrix;
+import json_parse.Parse;
+
+import json_conversion.Conversion;
 
 import java.io.*;
 
@@ -36,8 +37,13 @@ public class Client {
      */
     private void start() throws IOException{
     	
+<<<<<<< HEAD
     	MatrixToJson mtoj = new MatrixToJson();
     	JSONObject data = mtoj.fetchJsonFile("matrixAsJson");
+=======
+    	Conversion mtoj = new Conversion();
+    	JSONObject data = mtoj.fetchJsonFile("test.json");
+>>>>>>> branch 'master' of https://github.com/Josecespedesant/DotsClient.git
     	
     	DataOutputStream wr = new DataOutputStream(socket.getOutputStream());
     	wr.write(data.toString().getBytes());
