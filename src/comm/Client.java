@@ -37,7 +37,7 @@ public class Client {
     private void start() throws IOException{
     	
     	MatrixToJson mtoj = new MatrixToJson();
-    	JSONObject data = mtoj.fetchJsonFile("test.json");
+    	JSONObject data = mtoj.fetchJsonFile("matrixAsJson");
     	
     	DataOutputStream wr = new DataOutputStream(socket.getOutputStream());
     	wr.write(data.toString().getBytes());
