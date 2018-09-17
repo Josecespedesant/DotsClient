@@ -3,10 +3,9 @@ package comm;
 import java.net.*;
 
 import org.json.simple.JSONObject;
-
-import encode.MatrixToJson;
 import json_parse.Parse;
-
+import linkedlist.LinkedList;
+import matrix.Matrix;
 import json_conversion.Conversion;
 
 import java.io.*;
@@ -38,12 +37,13 @@ public class Client {
      */
     private void start() throws IOException{
     	
+    	Conversion conv = new Conversion();
+    	Parse parser = new Parse();
 
-    	MatrixToJson mtoj = new MatrixToJson();
-    	JSONObject data = mtoj.fetchJsonFile("matrixAsJson");
+    	JSONObject obj = conv.fetchJsonFile("matrixAsJson.json");
     	
     	DataOutputStream wr = new DataOutputStream(socket.getOutputStream());
-    	wr.write(data.toString().getBytes());
+    	wr.write(obj.toString().getBytes());
     	
     	
     	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
