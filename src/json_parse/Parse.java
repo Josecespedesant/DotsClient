@@ -1,11 +1,12 @@
 
 package json_parse;
 
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+
 import linkedlist.LinkedList;
 import linkedlist.Node;
 import matrix.Matrix;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
 
 /**
  * Translates a Matrix instance to/from .json format.
