@@ -38,44 +38,45 @@ public class Client {
     
     private void sendOrRecieved() throws IOException { //metodo miedo para probar el envio y recibimiento de datos (es momentaneo)
     	BufferedReader brs = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-     String time = brs.readLine();
-     int time1 = Integer.parseInt(time);
-     if(time1 == 1) {
-      System.out.println("uno");
-      this.received();
-     } else {
-      System.out.println("dos");
-      this.send();
-     }
-    }
+    	String time = brs.readLine();
+    	int time1 = Integer.parseInt(time);
+    	if(time1 == 1) {
+    		System.out.println("uno");
+    		this.received();
+    		}
+    	else {
+    		System.out.println("dos");
+    		this.send();
+    		}
+    	}
     
     private void received() throws IOException{
     	  BufferedReader brs = new BufferedReader(new InputStreamReader(socket.getInputStream()));
     	  try{
-    	   do {
-    	    String time = brs.readLine();
-    	    System.out.println(time);
-    	   } while (true);
-    	  } 
+    		  do {
+    			  String time = brs.readLine();
+    			  System.out.println(time);
+    			  } while (true);
+    		  } 
     	  catch (UnknownHostException ex) {
-    	   System.out.println("Server not found: " + ex.getMessage());
-    	  } 
+    		  System.out.println("Server not found: " + ex.getMessage());
+    		  } 
     	  catch (IOException ex) {
-    	   System.out.println("I/O error: " + ex.getMessage());
+    		  System.out.println("I/O error: " + ex.getMessage());
+    	  	  }
     	  }
-    	 }
     
     private void send() {
-    	  try {
+    	try {
     	   //Aquí hay que modificar esto para que la condicion de imprimir el objeto json no sea escribir en la consola.
-    	   PrintStream ps = new PrintStream(socket.getOutputStream());
-    	   ps.println("Cliente: " + "estoy que me lleva puta al puro vuela"); //envia un string ricolino bien alv, pero deberia de mandar el JSON
+    		PrintStream ps = new PrintStream(socket.getOutputStream());
+    	    ps.println("Cliente: " + "estoy que me lleva puta al puro vuela"); //envia un string ricolino bien alv, pero deberia de mandar el JSON
     	   // socket.close();
-    	  } catch (IOException ex) {
-    	   System.out.println("Server exception: " + ex.getMessage());
-    	   ex.printStackTrace();
-    	  }
-    	 }
+    	    } catch (IOException ex) {
+    	    	System.out.println("Server exception: " + ex.getMessage());
+    	    	ex.printStackTrace();
+    	    	}
+    	}
 
     
     /**
