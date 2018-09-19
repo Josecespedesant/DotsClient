@@ -35,36 +35,48 @@ public class Client {
      * Permite interactuar con el servidor
      * @throws IOException
      */
-    private void start() throws IOException{
-    	
-    	Conversion conv = new Conversion();
-    	Parse parser = new Parse();
-
-    	JSONObject obj = conv.fetchJsonFile("matrixAsJson.json");
-    	
-    	DataOutputStream wr = new DataOutputStream(socket.getOutputStream());
-    	wr.write(obj.toString().getBytes());
-    	
-    	
-    	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        PrintStream ps = new PrintStream(socket.getOutputStream());
-        BufferedReader brs = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-        String text;
-        try{
-        	 do {
-        		 text = br.readLine();
-        		 ps.println(text);
-        		 String time = brs.readLine();
-        		 System.out.println(time);
-        		 } while (true);
-        	 } 
-         catch (UnknownHostException ex) {
-        		 System.out.println("Server not found: " + ex.getMessage());
-        		 } 
-         catch (IOException ex) {
-            System.out.println("I/O error: " + ex.getMessage());
-            }
+    
+    private void sendOrRecieved() throws IOException { //metodo miedo para probar el envio y recibimiento de datos (es momentaneo)
+    	BufferedReader brs = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+     String time = brs.readLine();
+     int time1 = Integer.parseInt(time);
+     if(time1 == 1) {
+      System.out.println("uno");
+      this.received();
+     } else {
+      System.out.println("dos");
+      this.send();
+     }
     }
+    
+    private void received() throws IOException{
+    	  BufferedReader brs = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+    	  try{
+    	   do {
+    	    String time = brs.readLine();
+    	    System.out.println(time);
+    	   } while (true);
+    	  } 
+    	  catch (UnknownHostException ex) {
+    	   System.out.println("Server not found: " + ex.getMessage());
+    	  } 
+    	  catch (IOException ex) {
+    	   System.out.println("I/O error: " + ex.getMessage());
+    	  }
+    	 }
+    
+    private void send() {
+    	  try {
+    	   //Aquí hay que modificar esto para que la condicion de imprimir el objeto json no sea escribir en la consola.
+    	   PrintStream ps = new PrintStream(socket.getOutputStream());
+    	   ps.println("Cliente: " + "estoy que me lleva puta al puro vuela"); //envia un string ricolino bien alv, pero deberia de mandar el JSON
+    	   // socket.close();
+    	  } catch (IOException ex) {
+    	   System.out.println("Server exception: " + ex.getMessage());
+    	   ex.printStackTrace();
+    	  }
+    	 }
+
     
     /**
      * Método main que inicia el cliente
@@ -72,7 +84,7 @@ public class Client {
      * @throws Exception
      */
     public static void main(String[] args) throws Exception {
-      	Client cliente = new Client("192.168.100.2", 4444);
-      	cliente.start();
+      	Client cliente = new Client("127.0.0.1", 4444);
+      	cliente.sendOrRecieved();;
       }
 }
