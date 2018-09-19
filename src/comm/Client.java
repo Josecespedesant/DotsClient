@@ -67,15 +67,30 @@ public class Client {
     	  }
     
     private void send() {
-    	try {
-    	   //Aquí hay que modificar esto para que la condicion de imprimir el objeto json no sea escribir en la consola.
-    		PrintStream ps = new PrintStream(socket.getOutputStream());
-    	    ps.println("Cliente: " + "estoy que me lleva puta al puro vuela"); //envia un string ricolino bien alv, pero deberia de mandar el JSON
-    	   // socket.close();
-    	    } catch (IOException ex) {
-    	    	System.out.println("Server exception: " + ex.getMessage());
-    	    	ex.printStackTrace();
-    	    	}
+    	Conversion conv = new Conversion();
+        Parse parser = new Parse();
+
+        JSONObject obj = conv.fetchJsonFile("matrixAsJson.json");
+
+         try (FileWriter file = new FileWriter("matrixAsJson.json")) {
+
+             file.write(obj.toJSONString());
+             file.flush();
+
+       } catch (IOException e) {
+             e.printStackTrace();
+         }
+
+
+          try {
+           //Aquí hay que modificar esto para que la condicion de imprimir el objeto json no sea escribir en la consola.
+           PrintStream ps = new PrintStream(socket.getOutputStream());
+           ps.println("Cliente: " + obj); //envia un string ricolino bien alv, pero deberia de mandar el JSON
+           // socket.close();
+          } catch (IOException ex) {
+           System.out.println("Server exception: " + ex.getMessage());
+           ex.printStackTrace();
+          }
     	}
 
     
