@@ -29,6 +29,13 @@ public class Matrix {
         this.matrix = matrix;
     }
 
+    /**
+     * Sets matrix dimensions and initial values values.
+     *
+     * @param rows
+     * @param columns
+     * @param initialValue
+     */
     public Matrix(int rows, int columns, int initialValue) {
         int initialValue1 = initialValue;
         this.rows = rows;

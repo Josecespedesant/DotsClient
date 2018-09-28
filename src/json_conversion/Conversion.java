@@ -14,13 +14,18 @@ import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Handles reading and witting files.
+ *
+ * @author David Azofeifa H.
+ */
 public class Conversion {
 
     /**
      * Reads .json file and turns it into an JSONObject instance.
      *
      * @param docName, .json file name
-     * @return
+     * @return JSONObject instance
      */
     public JSONObject fetchJsonFile(String docName) {
         JSONObject json = null;
@@ -40,9 +45,8 @@ public class Conversion {
         return json;
     }
 
-
     /**
-     * Turns a JSONObject instance into a file and saves to disk.
+     * Turns a JSONObject instance into a file and saves it into disk.
      *
      * @param jsonDoc
      */
