@@ -4,7 +4,7 @@ import linkedlist.LinkedList;
 import linkedlist.Node;
 
 /**
- * Binary matrix made of lists that contain lists.
+ * Matrix made of lists that contain lists.
  *
  * @author David Azofeifa H.
  */
@@ -29,6 +29,13 @@ public class Matrix {
         this.matrix = matrix;
     }
 
+    /**
+     * Sets matrix dimensions and initial values values.
+     *
+     * @param rows
+     * @param columns
+     * @param initialValue
+     */
     public Matrix(int rows, int columns, int initialValue) {
         int initialValue1 = initialValue;
         this.rows = rows;

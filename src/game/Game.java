@@ -4,6 +4,7 @@ import matrix.Matrix;
 import people.Player;
 
 /**
+ * Handles the game state.
  *
  * @author David Azofeifa H.
  */

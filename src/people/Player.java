@@ -1,7 +1,7 @@
 package people;
 
 /**
- * Player class
+ * Represents player
  *
  * @author David Azofeifa H.
  */
