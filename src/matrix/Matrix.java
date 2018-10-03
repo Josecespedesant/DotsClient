@@ -4,7 +4,7 @@ import linkedlist.LinkedList;
 import linkedlist.Node;
 
 /**
- * Binary matrix made of lists that contain lists.
+ * Matrix made of lists that contain lists.
  *
  * @author David Azofeifa H.
  */
