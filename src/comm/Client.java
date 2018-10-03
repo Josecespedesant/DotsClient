@@ -40,7 +40,7 @@ public class Client {
     	Conversion conv = new Conversion();
     	Parse parser = new Parse();
 
-    	JSONObject obj = conv.fetchJsonFile("matrixAsJson.json");
+    	JSONObject obj = conv.fetchJsonFile("C:\\Users\\Jose Antonio\\git\\DotClient\\matrixAsJson.json");
     	
     	DataOutputStream wr = new DataOutputStream(socket.getOutputStream());
     	wr.write(obj.toString().getBytes());
@@ -72,7 +72,7 @@ public class Client {
      * @throws Exception
      */
     public static void main(String[] args) throws Exception {
-      	Client cliente = new Client("192.168.100.2", 4444);
+      	Client cliente = new Client("172.18.78.21", 4444);
       	cliente.start();
       }
 }
