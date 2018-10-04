@@ -5,6 +5,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
+/**
+ * GUI that tells players they've lost.
+ *
+ * @author David Azofeifa H.
+ */
 public class GameLostForm {
     private JPanel gameOver;
     private JButton restartButton;

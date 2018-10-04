@@ -7,7 +7,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
-
+/**
+ * Main menu gui where players can choose their names.
+ *
+ * @author David Azofeifa
+ */
 public class MainMenuForm {
     private JFormattedTextField welcomeToDotsFormattedTextField;
     private JTextField textField1;

@@ -3,6 +3,11 @@ package gui;
 import javax.swing.*;
 import java.awt.event.WindowEvent;
 
+/**
+ * GUI where players wait for match to start.
+ *
+ * @author David Azofeifa H.
+ */
 public class WaitingForm {
     private JPanel queue;
 
