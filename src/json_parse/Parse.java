@@ -106,6 +106,7 @@ public class Parse {
 
         // Decoding Mouse position
         LinkedList posMouse = new LinkedList();
+        //JSONArray mouse = new JSONArray();
         JSONArray mouse = (JSONArray) jsonDoc.get("mouse");
         posMouse.append(mouse.get(0));
         posMouse.append(mouse.get(1));
