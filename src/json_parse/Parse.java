@@ -90,18 +90,18 @@ public class Parse {
         JSONArray player1 = (JSONArray) players.get("1");
         String player1Name = (String) player1.get(0);
         Player _player1 = new Player(player1Name);
-        int player1Score = (int) player1.get(1);
+        int player1Score = (int) _player1.getScore();
         _player1.setScore(player1Score);
-        boolean player1ActiveTurn = (boolean) player1.get(2);
+        boolean player1ActiveTurn = (boolean) _player1.getActiveTurn();
         _player1.setActiveTurn(player1ActiveTurn);
 
         // Decoding player1
         JSONArray player2 = (JSONArray) players.get("2");
         String player2Name = (String) player2.get(0);
         Player _player2 = new Player(player2Name);
-        int player2Score = (int) player1.get(1);
+        int player2Score = (int) _player2.getScore();
         _player2.setScore(player2Score);
-        boolean player2ActiveTurn = (boolean) player2.get(2);
+        boolean player2ActiveTurn = (boolean) _player2.getActiveTurn();
         _player2.setActiveTurn(player2ActiveTurn);
 
         // Decoding Mouse position
