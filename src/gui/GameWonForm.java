@@ -3,17 +3,35 @@ package gui;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
 
 public class GameWonForm {
-    private JPanel panel1;
+    private JPanel gameWon;
     private JButton Restart;
+    private JFrame frame;
 
     public GameWonForm() {
         Restart.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                // TODO volver al menu inicial al presionar el boton
+                JFrame frame = new JFrame("Dots");
+                frame.setContentPane(new MainMenuForm().getPanel());
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.pack();
+                frame.setVisible(true);
             }
         });
+    }
+
+    public void selfBuild() {
+        this.frame = new JFrame("Dots");
+        this.frame.setContentPane(new GameWonForm().gameWon);
+        this.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.frame.pack();
+        this.frame.setVisible(true);
+    }
+
+    public void selfDestroy() {
+        this.frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
     }
 }
