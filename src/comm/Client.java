@@ -7,6 +7,7 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 import json_parse.Parse;
+import linkedlist.LinkedList;
 import matrix.Matrix;
 import json_conversion.Conversion;
 
@@ -35,9 +36,10 @@ public class Client {
     	this.socket = new Socket(serverAddress, serverPort);
     }
 
-<<<<<<< HEAD
-    	JSONObject obj = conv.fetchJsonFile("C:\\Users\\Jose Antonio\\git\\DotClient\\matrixAsJson.json");
+    public void start() throws IOException {
     	
+    	Conversion conv = new Conversion();
+    	JSONObject obj = conv.fetchJsonFile("C:\\Users\\Jose Antonio\\git\\DotClient\\matrixAsJson.json");
     	DataOutputStream wr = new DataOutputStream(socket.getOutputStream());
     	wr.write(obj.toString().getBytes());
     	
@@ -60,7 +62,7 @@ public class Client {
          catch (IOException ex) {
             System.out.println("I/O error: " + ex.getMessage());
             }
-=======
+    }
     /**
      * Allows interaction with server
      * @throws IOException
@@ -78,8 +80,8 @@ public class Client {
     		System.out.println("dos");
     		this.sendJson();
     	}
->>>>>>> branch 'master' of https://github.com/Josecespedesant/DotsClient.git
     }
+    
 
     /**
      * Reads incoming file and attempts to read it and form a JSONObject instance.
@@ -96,7 +98,8 @@ public class Client {
             JSONObject json = (JSONObject) parserS.parse(new InputStreamReader(new FileInputStream("matrixAsJson.json"))); //de String a Json
             System.out.println(JsonString);
             Parse parserM = new Parse();
-            Matrix matrix = parserM.JsonToMatrix(json);
+            LinkedList list = parserM.JsonToGameState(json);
+            Matrix matrix = (Matrix) list.getHead().getData();
             matrix.printMatrix();
     	  } 
     	  catch (UnknownHostException ex) {
@@ -131,12 +134,7 @@ public class Client {
      * @throws Exception
      */
     public static void main(String[] args) throws Exception {
-<<<<<<< HEAD
-      	Client cliente = new Client("172.18.78.21", 4444);
-      	cliente.start();
-=======
       	Client cliente = new Client("127.0.0.1", 4444);
-      	cliente.sendOrReceive();;
->>>>>>> branch 'master' of https://github.com/Josecespedesant/DotsClient.git
+      	cliente.start();
       }
 }
