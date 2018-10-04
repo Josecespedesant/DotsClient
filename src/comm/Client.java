@@ -6,9 +6,11 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+import game.Game;
 import json_parse.Parse;
 import linkedlist.LinkedList;
 import matrix.Matrix;
+import people.Player;
 import json_conversion.Conversion;
 
 import java.io.*;
@@ -38,7 +40,16 @@ public class Client {
 
     public void start() throws IOException {
     	
+    	Player player1 = new Player("Jose antorio");
+    	Player player2 = new Player("David");
+    	Game game = new Game(player1, player2, 9, 9, 0);
+    	LinkedList mpos = new LinkedList();
+    	mpos.append(4);
+    	mpos.append(5);
+    	JSONObject jsonDoc = game.getGameState(mpos);
+    	
     	Conversion conv = new Conversion();
+    	conv.saveJsonFile(jsonDoc);
     	JSONObject obj = conv.fetchJsonFile("C:\\Users\\Jose Antonio\\git\\DotClient\\matrixAsJson.json");
     	DataOutputStream wr = new DataOutputStream(socket.getOutputStream());
     	wr.write(obj.toString().getBytes());
