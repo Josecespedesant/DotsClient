@@ -35,6 +35,32 @@ public class Client {
     	this.socket = new Socket(serverAddress, serverPort);
     }
 
+<<<<<<< HEAD
+    	JSONObject obj = conv.fetchJsonFile("C:\\Users\\Jose Antonio\\git\\DotClient\\matrixAsJson.json");
+    	
+    	DataOutputStream wr = new DataOutputStream(socket.getOutputStream());
+    	wr.write(obj.toString().getBytes());
+    	
+    	
+    	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        PrintStream ps = new PrintStream(socket.getOutputStream());
+        BufferedReader brs = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+        String text;
+        try{
+        	 do {
+        		 text = br.readLine();
+        		 ps.println(text);
+        		 String time = brs.readLine();
+        		 System.out.println(time);
+        		 } while (true);
+        	 } 
+         catch (UnknownHostException ex) {
+        		 System.out.println("Server not found: " + ex.getMessage());
+        		 } 
+         catch (IOException ex) {
+            System.out.println("I/O error: " + ex.getMessage());
+            }
+=======
     /**
      * Allows interaction with server
      * @throws IOException
@@ -52,6 +78,7 @@ public class Client {
     		System.out.println("dos");
     		this.sendJson();
     	}
+>>>>>>> branch 'master' of https://github.com/Josecespedesant/DotsClient.git
     }
 
     /**
@@ -104,7 +131,12 @@ public class Client {
      * @throws Exception
      */
     public static void main(String[] args) throws Exception {
+<<<<<<< HEAD
+      	Client cliente = new Client("172.18.78.21", 4444);
+      	cliente.start();
+=======
       	Client cliente = new Client("127.0.0.1", 4444);
       	cliente.sendOrReceive();;
+>>>>>>> branch 'master' of https://github.com/Josecespedesant/DotsClient.git
       }
 }
