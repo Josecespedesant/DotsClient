@@ -106,7 +106,7 @@ public class Parse {
 
         // Decoding Mouse position
         LinkedList posMouse = new LinkedList();
-        JSONArray mouse = new JSONArray();
+        JSONArray mouse = (JSONArray) jsonDoc.get("mouse");
         posMouse.append(mouse.get(0));
         posMouse.append(mouse.get(1));
 
@@ -121,7 +121,7 @@ public class Parse {
         for (int j = 0; j < matrixColumns; j++) {
             JSONArray tempColumn = (JSONArray) _matrix.get(j);
             for (int i = 0; i < matrixRows; i++) {
-                int tempValue = ((Long) tempColumn.get(i)).intValue();
+                int tempValue = ((Integer) tempColumn.get(i)).intValue();
                 matrix.changeValue(i, j, tempValue);
             }
         }
