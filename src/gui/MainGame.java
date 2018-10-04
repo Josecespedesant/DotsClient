@@ -6,6 +6,7 @@ import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.WindowEvent;
+import java.awt.geom.Line2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -22,7 +23,7 @@ public class MainGame {
         final private int initialX = 150;
         final private int initialY = 140;
         final private int dotPadding = 75;
-
+        Lines A1 = new Lines(150, 140, 225, 140);
         Graphics graphics;
 
         Point[][] dots = new Point[rowSize][rowSize];
@@ -33,8 +34,10 @@ public class MainGame {
             this.setLayout(null);
             this.setMinimumSize(new Dimension(640, 480));
             this.setMaximumSize(new Dimension(640, 480));
+            this.setPreferredSize(this.getMaximumSize());
             this.setVisible(true);
             this.setBackground(Color.decode("#2F343F"));
+            
         }
 
         /**
@@ -45,6 +48,10 @@ public class MainGame {
         public void paint(Graphics g) {
             this.graphics = g;
             super.paint(g);
+            A1.draw(g);
+            
+            setVisible(true);
+        //    drawLines(g);
             // define the position
 
 
@@ -97,6 +104,13 @@ public class MainGame {
             }
         }
 
+      /*  void drawLines(Graphics g) {
+            Graphics2D g2d = (Graphics2D) g;
+            g2d.setColor(Color.WHITE);
+            g2d.drawLine(150, 140, 225, 140);
+     
+     
+        }
         public void drawLine(int i, int j, int player) {
 
             if (i%2==0 && j%2!=0) {
@@ -110,7 +124,7 @@ public class MainGame {
                         this.dots[1][j+1].x, this.dots[i][j+1].y);
             }
 
-        }
+        }*/
 
 
     }
@@ -143,6 +157,6 @@ public class MainGame {
     public static void main(String[] args) {
         MainGame mainGame = new MainGame();
         mainGame.selfBuild();
-       ((gameCanvas)mainGame.getGamePanel()).drawLine(0,1, 1);
+      // ((gameCanvas)mainGame.getGamePanel()).drawLine(0,1, 1);
     }
 }
