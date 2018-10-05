@@ -24,12 +24,10 @@ public class MainMenuForm {
 
 
     public MainMenuForm() {
-
         textField1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 playerName = textField1.getText();
-                selfDestroy();
             }
         });
     }

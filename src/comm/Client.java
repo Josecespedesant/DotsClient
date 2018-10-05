@@ -2,6 +2,7 @@ package comm;
 
 import java.net.*;
 
+import json_conversion.Conversion;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
@@ -9,9 +10,6 @@ import org.json.simple.parser.ParseException;
 import game.Game;
 import json_parse.Parse;
 import linkedlist.LinkedList;
-import matrix.Matrix;
-import people.Player;
-import json_conversion.Conversion;
 
 import java.io.*;
 
@@ -25,6 +23,9 @@ public class Client {
 	private Socket socket;
 	private Game game;
 	private LinkedList pMouse;
+	final private int rows = 9;
+	final private int columns = 9;
+	private final int initialValue = 0;
 
 	/**
 	 * Receives as parameters the address and port to locate server.
@@ -36,47 +37,17 @@ public class Client {
 	 */
     private Client(String serverAddress, int serverPort)throws Exception{
     	this.socket = new Socket(serverAddress, serverPort);
+    	this.game = new Game(this.rows, this.columns, this.initialValue);
     }
 
-    
-    
+
+
     public void start() throws IOException, ParseException {
-    	Conversion conv = new Conversion();
-        JSONParser parserS = new JSONParser();
-        ClientThread clienTh = new ClientThread(socket);
-
-    	JSONObject obj = (JSONObject) parserS.parse(new InputStreamReader(new FileInputStream("matrixAsJson.json")));
-    	DataOutputStream wr = new DataOutputStream(socket.getOutputStream());
-    	wr.write(obj.toString().getBytes());
-    	
-    	
-    	//BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        //PrintStream ps = new PrintStream(socket.getOutputStream());
-        BufferedReader brs = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-        String text;
-        try{
-        	 do {
-        		 
-        		 String time = brs.readLine();
-        		 System.out.println(time);
-        		// text = br.readLine();
-        		 //System.out.println(text+"kk");
-        		// ps.println(time);
-        		 
-                 Parse parserM = new Parse();
-
-                 //LinkedList list = parserM.JsonToGameState(obj);               
-                 
-                 //Matrix matrix = (Matrix) list.getHead().getData();
-                 //matrix.printMatrix();
-        		 } while (true);
-        	 } 
-         catch (UnknownHostException ex) {
-        		 System.out.println("Server not found: " + ex.getMessage());
-        		 } 
-         catch (IOException ex) {
-            System.out.println("I/O error: " + ex.getMessage());
-            }
+    	String name = game.startMenu();
+        Parse parser = new Parse();
+        JSONObject nameDoc = parser.namaAsJson(name);
+        Conversion conv = new Conversion();
+        conv.saveJsonFile(nameDoc, "name.json");
     }
 
     /**
@@ -94,7 +65,7 @@ public class Client {
             JSONObject json = (JSONObject) parserS.parse(new InputStreamReader(new FileInputStream("matrixAsJson.json"))); //de String a Json
             System.out.println(JsonString);
             Parse parserM = new Parse();
-            
+
               JSONObject obj = game.getGameState(pMouse);
               Parse parser = new Parse();
 //              LinkedList list = parser.JsonToGameState(obj);
@@ -103,11 +74,11 @@ public class Client {
 //            
       		LinkedList list = parserM.JsonToGameState(obj);
       		game.updateGameState(list);
-            
-    	  } 
+
+    	  }
     	  catch (UnknownHostException ex) {
     	   System.out.println("Server not found: " + ex.getMessage());
-    	  } 
+    	  }
     	  catch (IOException ex) {
     	   System.out.println("I/O error: " + ex.getMessage());
     	  }
@@ -116,11 +87,11 @@ public class Client {
 
     /**
      * Sends .json file to the server.
-     * @throws ParseException 
-     * @throws IOException 
+     * @throws ParseException
+     * @throws IOException
      */
     private void sendJson() throws IOException, ParseException {
-    	
+
         JSONObject obj = game.getGameState(pMouse);
 
           try {
@@ -132,29 +103,11 @@ public class Client {
            ex.printStackTrace();
           }
           this.receiveJson();
-    	}
-    
-    public Game getGame() {
-		return game;
-	}
+    }
 
-	public void setGame(Game game) {
-		this.game = game;
-	}
+    public static void main(String[] args) throws Exception {
+        Client client = new Client("127.0.0.1", 4444);
+        client.start();
+    }
 
-	public LinkedList getpMouse() {
-		return pMouse;
-	}
-
-	public void setpMouse(LinkedList pMouse) {
-		this.pMouse = pMouse;
-	}
-
-	
-    /**
-     * Initializes client
-     *
-     * @param args
-     * @throws Exception
-     */
 }

@@ -55,6 +55,7 @@ public class Game {
         MainMenuForm mainMenuForm = new MainMenuForm();
         String playerName = mainMenuForm.selfBuild();
         WaitingForm waitingForm = new WaitingForm();
+        waitingForm.selfBuild();
         return playerName;
     }
 
