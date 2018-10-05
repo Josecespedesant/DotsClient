@@ -60,7 +60,7 @@ public class Game {
     }
 
     public void startGame() {
-        MainGame mainGame = new MainGame();
+        MainGame mainGame = new MainGame(this.matrix);
     }
 
     public void gameLost() {

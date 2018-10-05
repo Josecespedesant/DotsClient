@@ -18,7 +18,6 @@ public class MainMenuForm {
     private JFormattedTextField pleaseEnterYourNameFormattedTextField;
     private JPanel BienvenidaYRegistro;
     private JFrame frame;
-
     private String playerName;
 
 
@@ -43,6 +42,7 @@ public class MainMenuForm {
     public String selfBuild() {
         this.frame = new JFrame("Dots");
         this.frame.setContentPane(this.BienvenidaYRegistro);
+        this.frame.setResizable(false);
         this.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.frame.pack();
         this.frame.setVisible(true);
