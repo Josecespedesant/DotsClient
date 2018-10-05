@@ -14,6 +14,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+import json_conversion.Conversion;
 import json_parse.Parse;
 import linkedlist.LinkedList;
 
@@ -31,20 +32,19 @@ public class ClientThread extends Thread{
     }
 	
     public JSONObject receiveFirstJson() throws IOException, ParseException {
-        BufferedReader brs = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-        JSONObject obj = new JSONObject();
-        while(brs.readLine() != null) {
-        	try{
-                String nombres = brs.readLine();
-                JSONParser parser1 = new JSONParser();
-                JSONObject jsonConNombres = (JSONObject) parser1.parse(nombres);
-                obj = jsonConNombres;
-            }catch(IOException ex){
-                System.out.println("I/O error: "+ ex.getMessage());
-            }
+    	System.out.println(socket.isClosed());
+    	BufferedReader brs = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+    	System.out.println(socket.isClosed());
+        String nombres = brs.readLine();
+        JSONParser parser1 = new JSONParser();
+        JSONObject jsonConNombres = (JSONObject) parser1.parse(nombres);
+        System.out.println(socket.isClosed());
+        return jsonConNombres;
         }
-        return obj;
-    }
+        
+
+    
+  
 	
     
     

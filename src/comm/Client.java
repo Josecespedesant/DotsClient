@@ -27,6 +27,7 @@ public class Client extends Thread{
     final private int rows = 9;
     final private int columns = 9;
     private final int initialValue = 0;
+    public int i = 0;
 
     /**
      * Receives as parameters the address and port to locate server.
@@ -42,35 +43,55 @@ public class Client extends Thread{
     }
 
     public void start() {
-<<<<<<< HEAD
-        ClientThread clthr = new ClientThread(socket);
-=======
-<<<<<<< HEAD
+
+    	ClientThread clthr = new ClientThread(socket);
         String name = null;
-        try {
-            name = game.startMenu();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-=======
-    	ClientThread clithr = new ClientThread(socket);
->>>>>>> branch 'master' of https://github.com/Josecespedesant/DotsClient.git
-        String name = game.startMenu();
->>>>>>> origin/master
+		try {
+			name = game.startMenu();
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
+		listen(clthr);
         Parse parser = new Parse();
         JSONObject nameDoc = parser.namaAsJson(name);
         Conversion conv = new Conversion();
         conv.saveJsonFile(nameDoc, "name.json");
         try {
-			clthr.sendFirstJson(nameDoc);
+        	i = 1;
+        	clthr.sendFirstJson(nameDoc);
+        	
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-        
     }
     
+    
 
-    public static void main(String[] args) throws Exception {
+    private void listen(ClientThread clthr) {
+		while(true) {
+			if(i == 1) {
+				i=0;
+				JSONObject obj = null;
+				try {
+					obj = clthr.receiveFirstJson();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (ParseException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				System.out.println(obj.toString());
+			}
+			
+			
+		}
+		
+	}
+
+	public static void main(String[] args) throws Exception {
         Client client = new Client("192.168.100.24", 4444);
         client.start();
      }
