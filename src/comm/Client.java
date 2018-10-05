@@ -157,17 +157,4 @@ public class Client {
      * @param args
      * @throws Exception
      */
-    public static void main(String[] args) throws Exception {
-      	Client cliente = new Client("127.0.0.1", 4444);
-      	
-      	Player p1 = new Player("Ana");
-      	Player p2 = new Player("Pedro");
-      	Game game = new Game(p1, p2, 9,9,0);
-      	LinkedList<Integer> pos = new LinkedList<Integer>();
-      	pos.append(4);
-      	pos.append(3);
-      	cliente.setGame(game);
-      	cliente.setpMouse(pos);
-      	cliente.sendJson();
-      }
 }

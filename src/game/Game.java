@@ -54,11 +54,8 @@ public class Game {
     public String startMenu() {
         MainMenuForm mainMenuForm = new MainMenuForm();
         String playerName = mainMenuForm.selfBuild();
-        return playerName;
-    }
-
-    public void waitingMenu() {
         WaitingForm waitingForm = new WaitingForm();
+        return playerName;
     }
 
     public void startGame() {

@@ -146,7 +146,7 @@ public class Parse {
         jsonDoc.put("2", player2Name);
         return jsonDoc;
     }
-    
+
     public String jsonToName(JSONObject jsonDoc) {
         String name = (String) jsonDoc.get("name");
         return name;
