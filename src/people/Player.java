@@ -7,15 +7,15 @@ package people;
  */
 public class Player {
 
-    private int score = 0;
     private boolean activeTurn = false;
     private String name;
+    private int score = 0;
 
     public int getScore() { return score; }
 
     public void setScore(int score) { this.score = score; }
 
-    public boolean isActiveTurn() { return activeTurn; }
+    public boolean getActiveTurn() { return activeTurn; }
 
     public void setActiveTurn(boolean activeTurn) { this.activeTurn = activeTurn; }
 
