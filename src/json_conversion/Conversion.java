@@ -58,7 +58,7 @@ public class Conversion {
         }
         catch (IOException e) {
             System.out.println(e.toString());
-            System.out.println("Coudn't save fila in specified path");
+            System.out.println("Couldn't save file in specified path");
         }
     }
 }

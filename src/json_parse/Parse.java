@@ -140,10 +140,18 @@ public class Parse {
         return jsonDoc;
     }
 
+    public JSONObject playerNamesasJson(String player1Name, String player2Name) {
+        JSONObject jsonDoc = new JSONObject();
+        jsonDoc.put("1", player1Name);
+        jsonDoc.put("2", player2Name);
+        return jsonDoc;
+    }
+    
     public String jsonToName(JSONObject jsonDoc) {
         String name = (String) jsonDoc.get("name");
         return name;
     }
+
 
     public LinkedList jsonToPlayerNames(JSONObject jsonDoc) {
         LinkedList names = new LinkedList();
