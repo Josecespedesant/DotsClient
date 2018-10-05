@@ -42,8 +42,21 @@ public class Client extends Thread{
     }
 
     public void start() {
+<<<<<<< HEAD
         ClientThread clthr = new ClientThread(socket);
+=======
+<<<<<<< HEAD
+        String name = null;
+        try {
+            name = game.startMenu();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+=======
+    	ClientThread clithr = new ClientThread(socket);
+>>>>>>> branch 'master' of https://github.com/Josecespedesant/DotsClient.git
         String name = game.startMenu();
+>>>>>>> origin/master
         Parse parser = new Parse();
         JSONObject nameDoc = parser.namaAsJson(name);
         Conversion conv = new Conversion();
