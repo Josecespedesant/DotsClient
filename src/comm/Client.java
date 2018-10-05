@@ -22,7 +22,11 @@ import java.io.*;
  *
  */
 public class Client {
-	private Socket socket;
+    private Socket socket;
+    private Game game;
+    final private int rows = 5;
+    final private int columns = 9;
+    final private int initialValue = 0;
 
 	/**
 	 * Receives as parameters the address and port to locate server.
@@ -32,48 +36,15 @@ public class Client {
 	 * @param serverPort
 	 * @throws Exception
 	 */
-    private Client(String serverAddress, int serverPort)throws Exception{
+    public Client(String serverAddress, int serverPort)throws Exception{
     	this.socket = new Socket(serverAddress, serverPort);
+    	this.game = new Game(this.rows, this.columns, this.initialValue);
     }
 
     
     
-    public void start() throws IOException, ParseException {
-    	Conversion conv = new Conversion();
-        JSONParser parserS = new JSONParser();
+    private void start() throws IOException, ParseException {
 
-    	JSONObject obj = (JSONObject) parserS.parse(new InputStreamReader(new FileInputStream("matrixAsJson.json")));
-    	DataOutputStream wr = new DataOutputStream(socket.getOutputStream());
-    	wr.write(obj.toString().getBytes());
-    	
-    	
-    	//BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        //PrintStream ps = new PrintStream(socket.getOutputStream());
-        BufferedReader brs = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-        String text;
-        try{
-        	 do {
-        		 
-        		 String time = brs.readLine();
-        		 System.out.println(time);
-        		// text = br.readLine();
-        		 //System.out.println(text+"kk");
-        		// ps.println(time);
-        		 
-                 Parse parserM = new Parse();
-
-                 //LinkedList list = parserM.JsonToGameState(obj);               
-                 
-                 //Matrix matrix = (Matrix) list.getHead().getData();
-                 //matrix.printMatrix();
-        		 } while (true);
-        	 } 
-         catch (UnknownHostException ex) {
-        		 System.out.println("Server not found: " + ex.getMessage());
-        		 } 
-         catch (IOException ex) {
-            System.out.println("I/O error: " + ex.getMessage());
-            }
     }
 
     /**
@@ -139,16 +110,4 @@ public class Client {
      * @param args
      * @throws Exception
      */
-    public static void main(String[] args) throws Exception {
-      	Client cliente = new Client("127.0.0.1", 4444);
-      	
-      	Player p1 = new Player("Ana");
-      	Player p2 = new Player("Pedro");
-      	Game game = new Game(p1, p2, 9,9,0);
-      	LinkedList<Integer> pos = new LinkedList<Integer>();
-      	pos.append(4);
-      	pos.append(3);
-      	
-      	cliente.sendJson(game, pos);
-      }
 }

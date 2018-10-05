@@ -19,6 +19,8 @@ public class MainMenuForm {
     private JPanel BienvenidaYRegistro;
     private JFrame frame;
 
+    private String playerName;
+
 
 
     public MainMenuForm() {
@@ -26,8 +28,8 @@ public class MainMenuForm {
         textField1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                WaitingForm waitingForm = new WaitingForm();
-                waitingForm.selfBuild();
+                playerName = textField1.getText();
+                selfDestroy();
             }
         });
     }
@@ -40,12 +42,17 @@ public class MainMenuForm {
         return this.BienvenidaYRegistro;
     }
 
-    public void selfBuild() {
+    public String selfBuild() {
         this.frame = new JFrame("Dots");
-        frame.setContentPane(new MainMenuForm().BienvenidaYRegistro);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.pack();
-        frame.setVisible(true);
+        this.frame.setContentPane(this.BienvenidaYRegistro);
+        this.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.frame.pack();
+        this.frame.setVisible(true);
+
+        while (playerName == null) {
+            System.out.println("No name");
+        }
+        return playerName;
     }
 
     public void selfDestroy() {
