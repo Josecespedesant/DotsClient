@@ -162,7 +162,7 @@ public class Client {
       	
       	Player p1 = new Player("Ana");
       	Player p2 = new Player("Pedro");
-      	Game game = new Game(p1, p2, 9,9,0);
+      	Game game = new Game(9,9,0);
       	LinkedList<Integer> pos = new LinkedList<Integer>();
       	pos.append(4);
       	pos.append(3);

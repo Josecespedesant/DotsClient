@@ -74,7 +74,7 @@ public class ClientThread extends Thread {
     		
     		JSONObject newJson = parserM.gameStateToJson(matrix, player1, player2, pos);
     		Conversion conv = new Conversion();
-    		conv.saveJsonFile(newJson);
+    		conv.saveJsonFile(newJson, JsonString);
     		
     		
     		matrix.printMatrix();
