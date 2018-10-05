@@ -23,6 +23,8 @@ import java.io.*;
  */
 public class Client {
 	private Socket socket;
+	private Game game;
+	private LinkedList pMouse;
 
 	/**
 	 * Receives as parameters the address and port to locate server.
@@ -41,6 +43,7 @@ public class Client {
     public void start() throws IOException, ParseException {
     	Conversion conv = new Conversion();
         JSONParser parserS = new JSONParser();
+        ClientThread clienTh = new ClientThread(socket);
 
     	JSONObject obj = (JSONObject) parserS.parse(new InputStreamReader(new FileInputStream("matrixAsJson.json")));
     	DataOutputStream wr = new DataOutputStream(socket.getOutputStream());
@@ -82,12 +85,9 @@ public class Client {
      * @throws IOException
      * @throws ParseException
      */
-    private void receiveJson(Game game, LinkedList pMouse) throws IOException, ParseException{
+    private void receiveJson() throws IOException, ParseException{
     	 BufferedReader brs = new BufferedReader(new InputStreamReader(socket.getInputStream()));
     	  try{
-    		  
-    	      
-    		  
             String JsonString = brs.readLine();
             System.out.println(JsonString);
             JSONParser parserS = new JSONParser();
@@ -111,7 +111,7 @@ public class Client {
     	  catch (IOException ex) {
     	   System.out.println("I/O error: " + ex.getMessage());
     	  }
-    	  this.sendJson(game, pMouse);
+    	  this.sendJson();
     }
 
     /**
@@ -119,7 +119,8 @@ public class Client {
      * @throws ParseException 
      * @throws IOException 
      */
-    private void sendJson(Game game, LinkedList pMouse) throws IOException, ParseException {
+    private void sendJson() throws IOException, ParseException {
+    	
         JSONObject obj = game.getGameState(pMouse);
 
           try {
@@ -130,9 +131,26 @@ public class Client {
            System.out.println("Server exception: " + ex.getMessage());
            ex.printStackTrace();
           }
-          this.receiveJson(game, pMouse);
+          this.receiveJson();
     	}
     
+    public Game getGame() {
+		return game;
+	}
+
+	public void setGame(Game game) {
+		this.game = game;
+	}
+
+	public LinkedList getpMouse() {
+		return pMouse;
+	}
+
+	public void setpMouse(LinkedList pMouse) {
+		this.pMouse = pMouse;
+	}
+
+	
     /**
      * Initializes client
      *
@@ -148,7 +166,8 @@ public class Client {
       	LinkedList<Integer> pos = new LinkedList<Integer>();
       	pos.append(4);
       	pos.append(3);
-      	
-      	cliente.sendJson(game, pos);
+      	cliente.setGame(game);
+      	cliente.setpMouse(pos);
+      	cliente.sendJson();
       }
 }
