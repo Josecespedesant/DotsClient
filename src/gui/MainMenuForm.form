@@ -15,53 +15,40 @@
     </properties>
     <border type="none"/>
     <children>
-      <component id="1695b" class="javax.swing.JFormattedTextField" binding="welcomeToDotsFormattedTextField" default-binding="true">
-        <constraints>
-          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="-1"/>
-          </grid>
-        </constraints>
-        <properties>
-          <alignmentX value="0.5"/>
-          <autoscrolls value="true"/>
-          <background color="-13683649"/>
-          <font name="Roboto Medium" size="48"/>
-          <foreground color="-16725935"/>
-          <horizontalAlignment value="0"/>
-          <margin top="2" left="5" bottom="2" right="5"/>
-          <name value="welcomeText"/>
-          <opaque value="true"/>
-          <requestFocusEnabled value="true"/>
-          <text value="Welcome To Dots"/>
-        </properties>
-      </component>
-      <component id="974eb" class="javax.swing.JFormattedTextField" binding="pleaseEnterYourNameFormattedTextField" default-binding="true">
-        <constraints>
-          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="1" fill="0" indent="0" use-parent-layout="false">
-            <preferred-size width="300" height="-1"/>
-          </grid>
-        </constraints>
-        <properties>
-          <background color="-13683649"/>
-          <font name="Roboto Medium" size="26"/>
-          <foreground color="-5835777"/>
-          <margin top="2" left="5" bottom="2" right="5"/>
-          <text value="Please enter your name"/>
-        </properties>
-      </component>
       <component id="6eb" class="javax.swing.JTextField" binding="textField1" default-binding="true">
         <constraints>
           <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="1" fill="1" indent="0" use-parent-layout="false">
-            <minimum-size width="300" height="30"/>
-            <preferred-size width="300" height="30"/>
-            <maximum-size width="300" height="30"/>
+            <minimum-size width="400" height="30"/>
+            <preferred-size width="400" height="30"/>
+            <maximum-size width="400" height="30"/>
           </grid>
         </constraints>
         <properties>
           <background color="-1"/>
+          <font name="Roboto Medium" size="18"/>
           <horizontalAlignment value="0"/>
           <margin top="2" left="5" bottom="2" right="5"/>
           <text value=""/>
+        </properties>
+      </component>
+      <component id="82c37" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Roboto Medium" size="48"/>
+          <foreground color="-16725935"/>
+          <text value="Welcome to Dots"/>
+        </properties>
+      </component>
+      <component id="729a5" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="2" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Roboto Medium" size="26"/>
+          <foreground color="-13388315"/>
+          <text value="Please enter your name"/>
         </properties>
       </component>
     </children>

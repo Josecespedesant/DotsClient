@@ -13,9 +13,7 @@ import java.awt.event.WindowEvent;
  * @author David Azofeifa
  */
 public class MainMenuForm {
-    private JFormattedTextField welcomeToDotsFormattedTextField;
     private JTextField textField1;
-    private JFormattedTextField pleaseEnterYourNameFormattedTextField;
     private JPanel BienvenidaYRegistro;
     private JFrame frame;
     private String playerName;

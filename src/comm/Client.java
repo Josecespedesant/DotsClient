@@ -44,7 +44,12 @@ public class Client extends Thread{
 
 
     public void start() {
-        String name = game.startMenu();
+        String name = null;
+        try {
+            name = game.startMenu();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         Parse parser = new Parse();
         JSONObject nameDoc = parser.namaAsJson(name);
         Conversion conv = new Conversion();
