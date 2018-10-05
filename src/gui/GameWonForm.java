@@ -30,6 +30,7 @@ public class GameWonForm {
 
     public void selfBuild() {
         this.frame = new JFrame("Dots");
+        this.frame.setResizable(false);
         this.frame.setContentPane(new GameWonForm().gameWon);
         this.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.frame.pack();

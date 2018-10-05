@@ -20,7 +20,8 @@ import matrix.Matrix;
  */
 
 public class ClientThread extends Thread {
- //Attribute of the class ServerThread
+
+	//Attribute of the class ServerThread
     private Socket socket;
     
     /**

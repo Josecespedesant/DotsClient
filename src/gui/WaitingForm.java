@@ -20,6 +20,7 @@ public class WaitingForm {
 
     public void selfBuild() {
         this.frame.setContentPane(new WaitingForm().queue);
+        this.frame.setResizable(false);
         this.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.frame.pack();
         this.frame.setVisible(true);
