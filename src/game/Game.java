@@ -1,5 +1,7 @@
 package game;
 
+import comm.Client;
+import gui.*;
 import json_parse.Parse;
 import linkedlist.LinkedList;
 import matrix.Matrix;
@@ -17,9 +19,15 @@ public class Game {
     private Player player1;
     private Player player2;
 
-    public Game(Player player1, Player player2, int rows, int columns, int initialValue) {
-        this.player1 = player1;
-        this.player2 = player2;
+    public Player getPlayer1() { return player1; }
+
+    public void setPlayer1(Player player1) { this.player1 = player1; }
+
+    public Player getPlayer2() { return player2; }
+
+    public void setPlayer2(Player player2) { this.player2 = player2; }
+
+    public Game(int rows, int columns, int initialValue) {
         this.matrix = new Matrix(rows, columns, initialValue);
 
         // Changes matrix values to please game format
@@ -43,6 +51,28 @@ public class Game {
         }
     }
 
+    public String startMenu() {
+        MainMenuForm mainMenuForm = new MainMenuForm();
+        String playerName = mainMenuForm.selfBuild();
+        return playerName;
+    }
+
+    public void waitingMenu() {
+        WaitingForm waitingForm = new WaitingForm();
+    }
+
+    public void startGame() {
+        MainGame mainGame = new MainGame();
+    }
+
+    public void gameLost() {
+        GameLostForm gameLostForm = new GameLostForm();
+    }
+
+    public void gameWon() {
+        GameWonForm gameWonForm = new GameWonForm();
+    }
+
     public void updateGameState(LinkedList list) {
         // Replaces matrix with the one received from the server
         this.matrix = (Matrix) list.getHead().getData();
@@ -59,10 +89,8 @@ public class Game {
     }
 
     public static void main(String[] args) {
-        Player player1 = new Player("David");
-        Player player2 = new Player("Jose Antorio");
-        Game game = new Game(player1, player2, 9, 9, 0);
-        game.matrix.printMatrix();
+        Game game = new Game(5, 5, 1);
+        System.out.println(game.startMenu());
     }
 
 }

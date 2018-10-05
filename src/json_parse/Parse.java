@@ -134,18 +134,24 @@ public class Parse {
         return gameState;
     }
 
-    public static void main(String[] args) {
-        Matrix matrix = new Matrix(4, 4, 5);
-        LinkedList posMouse = new LinkedList();
-        posMouse.append(40);
-        posMouse.append(70);
-        Player player1 = new Player("David");
-        Player player2 = new Player("Daniel");
-
-        Parse parser = new Parse();
-        JSONObject doc = parser.gameStateToJson(matrix, player1, player2, posMouse);
-
-        Conversion conv = new Conversion();
-        conv.saveJsonFile(doc);
+    public JSONObject namaAsJson(String name) {
+        JSONObject jsonDoc = new JSONObject();
+        jsonDoc.put("name", name);
+        return jsonDoc;
     }
+
+    public String jsonToName(JSONObject jsonDoc) {
+        String name = (String) jsonDoc.get("name");
+        return name;
+    }
+
+    public LinkedList jsonToPlayerNames(JSONObject jsonDoc) {
+        LinkedList names = new LinkedList();
+        String namePlayer1 = (String) jsonDoc.get("1");
+        names.append(namePlayer1);
+        String namePlayer2 = (String) jsonDoc.get("2");
+        names.append(namePlayer2);
+        return names;
+    }
+
 }

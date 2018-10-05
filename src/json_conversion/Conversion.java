@@ -50,9 +50,9 @@ public class Conversion {
      *
      * @param jsonDoc
      */
-    public void saveJsonFile(JSONObject jsonDoc) {
+    public void saveJsonFile(JSONObject jsonDoc, String docName) {
         List<String> lines = Arrays.asList(jsonDoc.toString());
-        Path file = Paths.get("matrixAsJson.json");
+        Path file = Paths.get(docName);
         try {
             Files.write(file, lines, Charset.forName("UTF-8"));
         }
