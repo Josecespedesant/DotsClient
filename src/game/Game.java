@@ -1,6 +1,5 @@
 package game;
 
-import comm.Client;
 import gui.*;
 import json_parse.Parse;
 import linkedlist.LinkedList;

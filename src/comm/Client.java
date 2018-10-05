@@ -44,24 +44,43 @@ public class Client extends Thread{
 
 
     public void start() {
+<<<<<<< HEAD
         String name = null;
         try {
             name = game.startMenu();
         } catch (IOException e) {
             e.printStackTrace();
         }
+=======
+    	ClientThread clithr = new ClientThread(socket);
+        String name = game.startMenu();
+>>>>>>> origin/master
         Parse parser = new Parse();
         JSONObject nameDoc = parser.namaAsJson(name);
         Conversion conv = new Conversion();
         conv.saveJsonFile(nameDoc, "name.json");
         try {
-            sendFirstJson(nameDoc);
+            clithr.sendFirstJson(nameDoc);
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
+        try {
+			listen(clithr);
+		} catch (IOException | ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     }
-
+    
+    public void listen(ClientThread clithr) throws IOException, ParseException {
+    	while(true) {
+    		JSONObject nombres = clithr.receiveFirstJson();
+    		System.out.println(nombres.toString());
+    	}
+    	
+    }
+    
     /**
      * Reads incoming file and attempts to read it and form a JSONObject instance.
      *
@@ -95,12 +114,6 @@ public class Client extends Thread{
             System.out.println("I/O error: " + ex.getMessage());
         }
         this.sendJson();
-    }
-
-    public void sendFirstJson(JSONObject json) throws IOException {
-        try(OutputStreamWriter out = new OutputStreamWriter(this.socket.getOutputStream(), StandardCharsets.UTF_8)){
-            out.write(json.toJSONString());
-        }
     }
 
     /**
